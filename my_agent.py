@@ -52,7 +52,7 @@ if __name__ == "__main__":
                             INITIAL_STATE, LEARNING_RATE, DISCOUNT_FACTOR, EXPLORATION_RATE, train, save_q_table)
     
     if join_server: 
-        agent.connect(ip=args.ip, port=args.port)
+        agent.connect(ip=ip, port=port)
     else: 
         if train: 
             print("TRAINING PERFORMANCE")
