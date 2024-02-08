@@ -1,6 +1,7 @@
 # CS1440/2440 Lab 3: QLearning and Collusion
 
 ## Introduction
+Please implement Q-learning in two simulated environments. The lab emphasizes the importance of state representation in RL and demonstrates that Q-learners can learn collusive strategies in competitive games.
 
 ## Setup and Installation
 Follow these steps to set up your environment and install the necessary package for the lab.
