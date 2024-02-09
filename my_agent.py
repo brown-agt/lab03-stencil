@@ -40,7 +40,7 @@ if __name__ == "__main__":
     # TODO: Please fill out each of these parameters: 
     name = ... # Give your agent a name 
     train = True # Set this to false if you want your agent to be purely exploiting and not exploring after training 
-    save_q_table = "qtable.npy" # Set to None to not save the q-table, otherwise save it under the file path that you give it E.g. "qtable.npy" 
+    save_q_table = None # Set to None to not save the q-table, otherwise save it under the file path that you give it E.g. "qtable.npy" 
                         # If the file already exists then it will initialize the q-table using the saved npy file. 
                         # TODO: PLEASE SAVE IT AS AN ACTUAL FILE like "qtable.npy" SO YOU CAN TEST IT
     join_server = False
