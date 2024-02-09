@@ -69,6 +69,7 @@ if __name__ == "__main__":
             )
             arena.run()
         print("TESTING PERFORMANCE")
+        agent.set_training_mode(False)
         arena = ChickenArena(
             num_rounds=1000,
             timeout=1,

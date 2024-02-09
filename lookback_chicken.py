@@ -42,7 +42,7 @@ if __name__ == "__main__":
     agent = LookBackChicken(name, NUM_POSSIBLE_STATES, NUM_POSSIBLE_ACTIONS,
                             INITIAL_STATE, LEARNING_RATE, DISCOUNT_FACTOR, EXPLORATION_RATE, train, save_q_table)
     arena = ChickenArena(
-        num_rounds=1000,
+        num_rounds=10000,
         timeout=1,
         players=[
             agent,
