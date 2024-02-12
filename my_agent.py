@@ -57,7 +57,7 @@ if __name__ == "__main__":
         if train: 
             print("TRAINING PERFORMANCE")
             arena = ChickenArena(
-                num_rounds=10000,
+                num_rounds=20000,
                 timeout=1,
                 players=[
                     agent,

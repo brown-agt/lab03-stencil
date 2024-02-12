@@ -41,8 +41,23 @@ if __name__ == "__main__":
     # START SIMULATING THE GAME
     agent = LookBackChicken(name, NUM_POSSIBLE_STATES, NUM_POSSIBLE_ACTIONS,
                             INITIAL_STATE, LEARNING_RATE, DISCOUNT_FACTOR, EXPLORATION_RATE, train, save_q_table)
+    print("TRAINING")
     arena = ChickenArena(
-        num_rounds=10000,
+        num_rounds=20000,
+        timeout=1,
+        players=[
+            agent,
+            BasicAgent("Agent_1"),
+            BasicAgent("Agent_2"),
+            BasicAgent("Agent_3"),
+            BasicAgent("Agent_4")
+        ]
+    )
+    arena.run()
+    print("TESTING")
+    agent.set_training_mode(False)
+    arena = ChickenArena(
+        num_rounds=1000,
         timeout=1,
         players=[
             agent,
