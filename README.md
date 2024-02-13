@@ -30,7 +30,7 @@ python -m venv .venv
 ### Step 3: Install the agt server package
 ```bash
 pip install --upgrade pip
-pip install agt-server
+pip install --upgrade agt-server
 ```
 
 ## Agent Methods 
