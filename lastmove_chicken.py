@@ -29,7 +29,7 @@ if __name__ == "__main__":
     #### DO NOT TOUCH THIS #####
     name = "Last Move Chicken"
     train = True
-    save_q_table = None # Set to None to not save the q-table, otherwise save it under the file path that you give it E.g. "qtable.npy" 
+    save_q_table = "lm-q-table.npy" # Set to None to not save the q-table, otherwise save it under the file path that you give it E.g. "qtable.npy" 
                         # If the file already exists then it will initialize the q-table using the saved npy file. 
 
     # START SIMULATING THE GAME
@@ -38,7 +38,7 @@ if __name__ == "__main__":
     print("TRAINING")
     arena = ChickenArena(
         num_rounds=20000,
-        timeout=1,
+        timeout=100,
         players=[
             agent,
             BasicAgent("Agent_1"),
@@ -52,7 +52,7 @@ if __name__ == "__main__":
     agent.set_training_mode(False)
     arena = ChickenArena(
         num_rounds=1000,
-        timeout=1,
+        timeout=100,
         players=[
             agent,
             BasicAgent("Agent_1"),
@@ -62,3 +62,4 @@ if __name__ == "__main__":
         ]
     )
     arena.run()
+

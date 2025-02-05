@@ -11,7 +11,6 @@ class MyChickenAgent(QLearning):
     def __init__(self, name, num_possible_states, num_possible_actions, initial_state, learning_rate, discount_factor, exploration_rate, training_mode, save_path=None) -> None:
         super().__init__(name, num_possible_states, num_possible_actions, initial_state,
                          learning_rate, discount_factor, exploration_rate, training_mode, save_path)
-        self.name = "TODO: NAME YOUR AGENT"
 
     def determine_state(self):
         # Determines the next state s_prime given the action histories and reward histories
@@ -38,9 +37,9 @@ if __name__ == "__main__":
     EXPLORATION_RATE = 0.05
     
     # TODO: Please fill out each of these parameters: 
-    name = ... # Give your agent a name 
+    name = ??? # Give your agent a name 
     train = True # Set this to false if you want your agent to be purely exploiting and not exploring after training 
-    save_q_table = None # Set to None to not save the q-table, otherwise save it under the file path that you give it E.g. "qtable.npy" 
+    save_q_table = "q-table.npy" # Set to None to not save the q-table, otherwise save it under the file path that you give it E.g. "qtable.npy" 
                         # If the file already exists then it will initialize the q-table using the saved npy file. 
                         # TODO: PLEASE SAVE IT AS AN ACTUAL FILE like "qtable.npy" SO YOU CAN TEST IT
     join_server = False
@@ -58,7 +57,7 @@ if __name__ == "__main__":
             print("TRAINING PERFORMANCE")
             arena = ChickenArena(
                 num_rounds=20000,
-                timeout=1,
+                timeout=100,
                 players=[
                     agent,
                     MysteryAgent("Bok"),
@@ -72,7 +71,7 @@ if __name__ == "__main__":
         agent.set_training_mode(False)
         arena = ChickenArena(
             num_rounds=1000,
-            timeout=1,
+            timeout=100,
             players=[
                 agent,
                 MysteryAgent("Bok"),
