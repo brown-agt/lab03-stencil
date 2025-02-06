@@ -64,8 +64,7 @@ class CollusionLearner():
         price_i = price_i # Your price
         prices = np.array([price_i, price_j]) # Array of prices (i -> your price), (j -> opp price)
         
-        # TODO: Fill out the logit function as per specifications in the stencil
-        raise NotImplementedError
+        return np.exp((a_i - price_i) / mu) / (np.sum(np.exp((a_i - prices) / mu)) + np.exp(a_0 / mu))
 
     def init_q(self):
         """Used to initialize Q tables"""
